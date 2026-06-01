@@ -426,6 +426,8 @@
   .dot-hike { background: #4a5d3f; }
   .dot-rifugio { background: #ca8a04; }
   .dot-travel { background: #1e3a8a; }
+  .dot-viewpoint { background: #7c3aed; }
+  .dot-food { background: #b91c1c; }
 
   /* Custom marker icons */
   .pin {
@@ -451,6 +453,10 @@
   .pin-rifugio { background: #ca8a04; width: 26px; height: 26px; }
   .pin-rifugio span { font-size: 11px; }
   .pin-travel { background: #1e3a8a; }
+  .pin-viewpoint { background: #7c3aed; width: 26px; height: 26px; }
+  .pin-viewpoint span { font-size: 12px; }
+  .pin-food { background: #b91c1c; width: 26px; height: 26px; }
+  .pin-food span { font-size: 13px; }
 
   /* Leaflet popup styling */
   .leaflet-popup-content-wrapper {
@@ -466,6 +472,15 @@
     font-size: 12.5px;
     line-height: 1.5;
     min-width: 220px;
+  }
+  .leaflet-popup-content .pop-img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    margin: -4px 0 10px 0;
+    border: 1px solid var(--ink);
+    background: #eee;
   }
   .leaflet-popup-content .pop-title {
     font-family: 'Fraunces', serif;
@@ -797,22 +812,22 @@
       <strong>Trip</strong> · 04 Jul → 11 Jul 2026<br>
       <strong>Duration</strong> · 7 nights / 8 days<br>
       <strong>Arrival</strong> · Treviso (TSF)<br>
-      <strong>Hikes</strong> · 8 routes across 3 valleys
+      <strong>Hikes</strong> · 6 routes across 3 valleys
     </div>
   </header>
 
   <!-- INTRO -->
   <div class="intro">
     <div class="intro-text">
-      <span class="drop">A</span>n itinerary built around eight of the finest hikes in the Italian Dolomites — from the postcard sunrise at Lago di Braies to the WWI tunnels carved into Monte Lagazuoi. Each route is paired with parking logistics, booking windows, and reviewer-rated difficulty so nothing surprises you on the trail.
+      <span class="drop">A</span>n itinerary built around six carefully-picked hikes in the Italian Dolomites — from the postcard sunrise at Lago di Braies to the WWI tunnels carved into Monte Lagazuoi. Each route is paired with parking logistics, booking windows, and reviewer-rated difficulty so nothing surprises you on the trail.
     </div>
     <div class="stats">
       <div class="stat">
-        <div class="stat-num">8</div>
+        <div class="stat-num">6</div>
         <div class="stat-label">Hikes Planned</div>
       </div>
       <div class="stat">
-        <div class="stat-num">~76</div>
+        <div class="stat-num">~57</div>
         <div class="stat-label">Trail Kilometres</div>
       </div>
       <div class="stat">
@@ -829,7 +844,7 @@
   <!-- SECTION 1: HIKES TABLE -->
   <div class="section-head">
     <span class="section-num">§ 01</span>
-    <h2>The Eight Hikes</h2>
+    <h2>The Six Hikes</h2>
   </div>
 
   <div class="hikes-grid">
@@ -844,213 +859,12 @@
       <div>Base Camp</div>
     </div>
 
-    <!-- 1: Tre Cime -->
+    <!-- 1: Sassolungo Circuit (Day 2) -->
     <div class="hike-row">
       <div class="hike-num" data-label="№">01</div>
       <div data-label="Hike">
-        <div class="hike-name">Tre Cime di Lavaredo Loop</div>
-        <div class="hike-area">Cortina cluster · Iconic circuit</div>
-        <div class="trail-links">
-          <a href="https://www.alltrails.com/trail/italy/south-tyrol/rifugio-auronzo-tre-cime-di-lavaredo" target="_blank" rel="noopener">AllTrails ↗</a>
-          <a href="https://www.komoot.com/smarttour/e1064037" target="_blank" rel="noopener">Komoot ↗</a>
-        </div>
-      </div>
-      <div data-label="Stats" class="stat-block">
-        <span class="v">10 km</span><span class="l">distance</span>
-        <span class="v">+400 m</span><span class="l">elevation</span>
-        <span class="v">3–4 hrs</span><span class="l">time</span>
-      </div>
-      <div data-label="Difficulty" class="rating-row">
-        <span class="diff diff-moderate">Moderate</span>
-        <span class="rating">★ 4.8</span>
-        <span class="rating-src">AllTrails · 1,044+ reviews</span>
-      </div>
-      <div data-label="Parking" class="booking">
-        <strong>Mandatory online booking</strong>
-        <a href="https://auronzo.info/en/parking-tre-cime-di-lavaredo/" target="_blank" rel="noopener">auronzo.info ↗</a>
-        <span class="when">€40/car · 12 hr · opens 1 month ahead (book ~9 Jun for trip)</span>
-      </div>
-      <div data-label="Base">Dobbiaco<br><span class="nb">or Cortina</span></div>
-    </div>
-
-    <!-- Refugio row 1 -->
-    <div class="hike-row refugio-row">
-      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
-      <div class="refugio-list" data-label="On this hike">
-        <a href="http://www.rifugioauronzo.it/" target="_blank" rel="noopener">Rifugio Auronzo</a> (2,320 m · start) ·
-        <a href="http://www.rifugiolavaredo.com/" target="_blank" rel="noopener">Rifugio Lavaredo</a> (2,344 m) ·
-        <a href="https://www.dreizinnenhuette.com/" target="_blank" rel="noopener">Rifugio Locatelli / Dreizinnenhütte</a> (2,405 m · best views of north faces) ·
-        <a href="https://www.longolbe.com/" target="_blank" rel="noopener">Malga Langalm</a> (descent)
-      </div>
-    </div>
-
-    <!-- 2: Lago di Braies -->
-    <div class="hike-row">
-      <div class="hike-num" data-label="№">02</div>
-      <div data-label="Hike">
-        <div class="hike-name">Lago di Braies — Lake Loop</div>
-        <div class="hike-area">Cortina cluster · Sunrise classic</div>
-        <div class="trail-links">
-          <a href="https://www.alltrails.com/trail/italy/south-tyrol/lago-di-braies-loop" target="_blank" rel="noopener">AllTrails ↗</a>
-          <a href="https://www.komoot.com/smarttour/e1043437" target="_blank" rel="noopener">Komoot ↗</a>
-        </div>
-      </div>
-      <div data-label="Stats" class="stat-block">
-        <span class="v">3.5 km</span><span class="l">distance</span>
-        <span class="v">flat</span><span class="l">elevation</span>
-        <span class="v">1–1.5 hrs</span><span class="l">time</span>
-      </div>
-      <div data-label="Difficulty" class="rating-row">
-        <span class="diff diff-easy">Easy</span>
-        <span class="rating">★ 4.7</span>
-        <span class="rating-src">AllTrails · high volume</span>
-      </div>
-      <div data-label="Parking" class="booking">
-        <strong>Two booking sites</strong>
-        <a href="https://www.prags.bz/en" target="_blank" rel="noopener">prags.bz ↗</a> P1 + shuttle, €44 combo<br>
-        <a href="https://www.pragsparking.com/en" target="_blank" rel="noopener">pragsparking.com ↗</a> P4 at lake
-        <span class="when">prags.bz opens early June 2026 for 1 Jul – 15 Sep period</span>
-      </div>
-      <div data-label="Base">Dobbiaco<br><span class="nb">or Cortina</span></div>
-    </div>
-
-    <!-- Refugio row 2 -->
-    <div class="hike-row refugio-row">
-      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
-      <div class="refugio-list" data-label="On this hike">
-        Lakeside restaurants only on the loop itself (Hotel Lago di Braies, Chalet Grill, Emmas Bistro) ·
-        For the longer extension:
-        <a href="https://www.alpinverein-suedtirol.it/de/seekofelhuette/" target="_blank" rel="noopener">Rifugio Biella / Seekofelhütte</a> (2,327 m · 3 hrs up, start of Alta Via 1)
-      </div>
-    </div>
-
-    <!-- 3: Seceda -->
-    <div class="hike-row">
-      <div class="hike-num" data-label="№">03</div>
-      <div data-label="Hike">
-        <div class="hike-name">Seceda Ridgeline</div>
-        <div class="hike-area">Val Gardena cluster · Easy walk</div>
-        <div class="trail-links">
-          <a href="https://www.alltrails.com/italy/south-tyrol/ortisei--6" target="_blank" rel="noopener">AllTrails ↗</a>
-          <a href="https://www.komoot.com/guide/210749/hiking-around-seceda" target="_blank" rel="noopener">Komoot ↗</a>
-        </div>
-      </div>
-      <div data-label="Stats" class="stat-block">
-        <span class="v">2 km</span><span class="l">distance</span>
-        <span class="v">minimal</span><span class="l">elevation</span>
-        <span class="v">30–60 min</span><span class="l">time</span>
-      </div>
-      <div data-label="Difficulty" class="rating-row">
-        <span class="diff diff-easy">Easy</span>
-        <span class="rating">★ 4.8</span>
-        <span class="rating-src">AllTrails</span>
-      </div>
-      <div data-label="Parking" class="booking">
-        <strong>No parking booking</strong>
-        Book cable car instead:<br>
-        <a href="https://www.seceda.it/en/info" target="_blank" rel="noopener">seceda.it ↗</a>
-        <span class="when">Timed slots — opens April for full summer</span>
-      </div>
-      <div data-label="Base">Ortisei</div>
-    </div>
-
-    <!-- Refugio row 3 -->
-    <div class="hike-row refugio-row">
-      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
-      <div class="refugio-list" data-label="On this hike">
-        <a href="https://www.rifugiofermeda.com/" target="_blank" rel="noopener">Rifugio Fermeda</a> (2,111 m) ·
-        Baita Sofie · Baita Daniel · Pana Raida — all simple mountain restaurants at the top station with classic Ladin cuisine and ridgeline views
-      </div>
-    </div>
-
-    <!-- 4: Resciesa → Brogles → Seceda -->
-    <div class="hike-row">
-      <div class="hike-num" data-label="№">04</div>
-      <div data-label="Hike">
-        <div class="hike-name">Resciesa → Brogles → Seceda</div>
-        <div class="hike-area">Val Gardena cluster · Quiet alternative</div>
-        <div class="trail-links">
-          <a href="https://www.alltrails.com/trail/italy/south-tyrol/rasciesa-brogles-seceda" target="_blank" rel="noopener">AllTrails ↗</a>
-          <a href="https://www.komoot.com/smarttour/e2046581" target="_blank" rel="noopener">Komoot ↗</a>
-        </div>
-      </div>
-      <div data-label="Stats" class="stat-block">
-        <span class="v">12 km</span><span class="l">distance</span>
-        <span class="v">+700 m</span><span class="l">elevation</span>
-        <span class="v">5–6 hrs</span><span class="l">time</span>
-      </div>
-      <div data-label="Difficulty" class="rating-row">
-        <span class="diff diff-moderate">Moderate</span>
-        <span class="rating">★ 4.6</span>
-        <span class="rating-src">AllTrails</span>
-      </div>
-      <div data-label="Parking" class="booking">
-        <strong>Use funiculars</strong>
-        <a href="https://www.valgardena.com/" target="_blank" rel="noopener">valgardena.com ↗</a> (Resciesa up)<br>
-        <a href="https://www.seceda.it/en/info" target="_blank" rel="noopener">seceda.it ↗</a> (Seceda down)
-        <span class="when">Take path 35 toward Brogles — avoid Mittagsscharte variant</span>
-      </div>
-      <div data-label="Base">Ortisei</div>
-    </div>
-
-    <!-- Refugio row 4 -->
-    <div class="hike-row refugio-row">
-      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
-      <div class="refugio-list" data-label="On this hike">
-        Rifugio Resciesa (2,165 m · top of funicular) ·
-        <a href="https://www.brogleshuette.com/" target="_blank" rel="noopener">Rifugio Brogles / Brogleshütte</a> (2,045 m · best lunch stop, mid-route) ·
-        Baita Sofie / Daniel / Pana Raida (Seceda top, end of hike)
-      </div>
-    </div>
-
-    <!-- 5: Col dala Pieres -->
-    <div class="hike-row">
-      <div class="hike-num" data-label="№">05</div>
-      <div data-label="Hike">
-        <div class="hike-name">Col dala Pieres</div>
-        <div class="hike-area">Val Gardena cluster · Puez-Odle summit</div>
-        <div class="trail-links">
-          <a href="https://www.alltrails.com/trail/italy/south-tyrol/daunei-col-da-la-pieres" target="_blank" rel="noopener">AllTrails ↗</a>
-          <a href="https://www.komoot.com/highlight/77224" target="_blank" rel="noopener">Komoot ↗</a>
-        </div>
-      </div>
-      <div data-label="Stats" class="stat-block">
-        <span class="v">12 km</span><span class="l">distance</span>
-        <span class="v">+1,150 m</span><span class="l">elevation</span>
-        <span class="v">6 hrs</span><span class="l">time</span>
-      </div>
-      <div data-label="Difficulty" class="rating-row">
-        <span class="diff diff-hard">Hard</span>
-        <span class="rating">★ 4.7</span>
-        <span class="rating-src">AllTrails · Komoot</span>
-      </div>
-      <div data-label="Parking" class="booking">
-        <strong>Two trailhead options</strong>
-        Paid lot at Daunëi (above Selva) — free-form<br>
-        Or Col Raiser cable car:
-        <a href="https://www.colraiser.it/" target="_blank" rel="noopener">colraiser.it ↗</a>
-        <span class="when">Cable assistance section near summit · surefootedness req'd</span>
-      </div>
-      <div data-label="Base">Selva<br><span class="nb">or Santa Cristina</span></div>
-    </div>
-
-    <!-- Refugio row 5 -->
-    <div class="hike-row refugio-row">
-      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
-      <div class="refugio-list" data-label="On this hike">
-        <a href="https://www.juac.it/" target="_blank" rel="noopener">Rifugio Juac</a> (1,905 m · forest section) ·
-        <a href="https://www.rifugiostevia.com/" target="_blank" rel="noopener">Rifugio Stevia</a> (2,312 m · before the summit push) ·
-        <a href="https://www.rifugiofirenze.com/" target="_blank" rel="noopener">Rifugio Firenze / Regensburger Hütte</a> (2,037 m · Col Raiser route) ·
-        <a href="https://www.rifugiopuez.com/" target="_blank" rel="noopener">Rifugio Puez</a> (2,475 m · descent variant)
-      </div>
-    </div>
-
-    <!-- 6: Sassolungo Circuit -->
-    <div class="hike-row">
-      <div class="hike-num" data-label="№">06</div>
-      <div data-label="Hike">
         <div class="hike-name">Sassolungo Circuit</div>
-        <div class="hike-area">Val Gardena cluster · Full massif loop</div>
+        <div class="hike-area">Day 2 · Val Gardena · Full massif loop</div>
         <div class="trail-links">
           <a href="https://www.alltrails.com/trail/italy/south-tyrol/sassolungo-circuit" target="_blank" rel="noopener">AllTrails ↗</a>
           <a href="https://www.komoot.com/smarttour/e1043435" target="_blank" rel="noopener">Komoot ↗</a>
@@ -1067,14 +881,14 @@
         <span class="rating-src">AllTrails · Komoot</span>
       </div>
       <div data-label="Parking" class="booking">
-        <strong>Free, first-come first-served</strong>
-        Passo Sella · arrive before 9 AM<br>
-        <span class="when">Or take Sella Ronda summer bus</span>
+        <strong>Free at Passo Sella</strong>
+        Arrive before 9 AM<br>
+        <span class="when">Or take the Sella Ronda summer bus</span>
       </div>
-      <div data-label="Base">Selva di Val Gardena</div>
+      <div data-label="Base">Luson</div>
     </div>
 
-    <!-- Refugio row 6 -->
+    <!-- Refugio row 1 -->
     <div class="hike-row refugio-row">
       <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
       <div class="refugio-list" data-label="On this hike">
@@ -1085,12 +899,89 @@
       </div>
     </div>
 
-    <!-- 7: Cinque Torri + Nuvolau -->
+    <!-- 2: Adolf-Munkel-Weg (Day 3) -->
     <div class="hike-row">
-      <div class="hike-num" data-label="№">07</div>
+      <div class="hike-num" data-label="№">02</div>
+      <div data-label="Hike">
+        <div class="hike-name">Adolf-Munkel-Weg</div>
+        <div class="hike-area">Day 3 · Val di Funes · Under the Odle</div>
+        <div class="trail-links">
+          <a href="https://www.alltrails.com/trail/italy/south-tyrol/via-delle-odle-zanser-alm-rifugio-delle-odle-malga-dusler" target="_blank" rel="noopener">AllTrails ↗</a>
+          <a href="https://www.komoot.com/smarttour/e58947" target="_blank" rel="noopener">Komoot ↗</a>
+        </div>
+      </div>
+      <div data-label="Stats" class="stat-block">
+        <span class="v">9 km</span><span class="l">distance</span>
+        <span class="v">+300 m</span><span class="l">elevation</span>
+        <span class="v">3–4 hrs</span><span class="l">time</span>
+      </div>
+      <div data-label="Difficulty" class="rating-row">
+        <span class="diff diff-easy">Easy–Mod</span>
+        <span class="rating">★ 4.7</span>
+        <span class="rating-src">AllTrails · 2,695 reviews</span>
+      </div>
+      <div data-label="Parking" class="booking">
+        <strong>€6/day at Malga Zannes</strong>
+        ~35 min drive from Ortisei
+        <span class="when">Fills by 9 AM in July — go early</span>
+      </div>
+      <div data-label="Base">Luson</div>
+    </div>
+
+    <!-- Refugio row 2 -->
+    <div class="hike-row refugio-row">
+      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
+      <div class="refugio-list" data-label="On this hike">
+        <a href="https://www.geisleralm.com/en" target="_blank" rel="noopener">Geisler Alm / Malga Geisler</a> (1,996 m · legendary lunch stop, goulash + strudel, fills by noon) ·
+        Gschnagenhardt Alm (2,006 m · alternative if Geisler is packed) ·
+        Zannes Alm (back at trailhead)
+      </div>
+    </div>
+
+    <!-- 3: Seceda Quick Option (Day 4) -->
+    <div class="hike-row">
+      <div class="hike-num" data-label="№">03</div>
+      <div data-label="Hike">
+        <div class="hike-name">Seceda Ridgeline (quick option)</div>
+        <div class="hike-area">Day 4 · Val Gardena · Cable car + ridge walk</div>
+        <div class="trail-links">
+          <a href="https://www.alltrails.com/italy/south-tyrol/ortisei--6" target="_blank" rel="noopener">AllTrails ↗</a>
+          <a href="https://www.komoot.com/guide/210749/hiking-around-seceda" target="_blank" rel="noopener">Komoot ↗</a>
+        </div>
+      </div>
+      <div data-label="Stats" class="stat-block">
+        <span class="v">2 km</span><span class="l">distance</span>
+        <span class="v">minimal</span><span class="l">elevation</span>
+        <span class="v">1 hr</span><span class="l">time</span>
+      </div>
+      <div data-label="Difficulty" class="rating-row">
+        <span class="diff diff-easy">Easy</span>
+        <span class="rating">★ 4.8</span>
+        <span class="rating-src">AllTrails</span>
+      </div>
+      <div data-label="Parking" class="booking">
+        <strong>Cable car only · €52 return</strong>
+        Book at <a href="https://www.seceda.it/en/info" target="_blank" rel="noopener">seceda.it ↗</a>
+        <span class="when">Timed slots — bookable from April</span>
+      </div>
+      <div data-label="Base">Luson</div>
+    </div>
+
+    <!-- Refugio row 3 -->
+    <div class="hike-row refugio-row">
+      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
+      <div class="refugio-list" data-label="On this hike">
+        <a href="https://www.rifugiofermeda.com/" target="_blank" rel="noopener">Rifugio Fermeda</a> (2,111 m) ·
+        Baita Sofie · Baita Daniel · Pana Raida — simple mountain restaurants at the top station with classic Ladin cuisine and ridgeline views
+      </div>
+    </div>
+
+    <!-- 4: Cinque Torri + Nuvolau (Day 5) -->
+    <div class="hike-row">
+      <div class="hike-num" data-label="№">04</div>
       <div data-label="Hike">
         <div class="hike-name">Cinque Torri + Rifugio Nuvolau</div>
-        <div class="hike-area">Cortina cluster · Towers + WWI museum</div>
+        <div class="hike-area">Day 5 · Cortina · Towers + WWI museum</div>
         <div class="trail-links">
           <a href="https://www.alltrails.com/trail/italy/veneto/rifugio-nuvolau-and-cinque-torri-loop" target="_blank" rel="noopener">AllTrails ↗</a>
           <a href="https://www.komoot.com/smarttour/e1043440" target="_blank" rel="noopener">Komoot ↗</a>
@@ -1115,7 +1006,7 @@
       <div data-label="Base">Cortina d'Ampezzo</div>
     </div>
 
-    <!-- Refugio row 7 -->
+    <!-- Refugio row 4 -->
     <div class="hike-row refugio-row">
       <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
       <div class="refugio-list" data-label="On this hike">
@@ -1126,45 +1017,81 @@
       </div>
     </div>
 
-    <!-- 8: Lagazuoi -->
+    <!-- 5: Tre Cime + Cadini combo (Day 6) -->
     <div class="hike-row">
-      <div class="hike-num" data-label="№">08</div>
+      <div class="hike-num" data-label="№">05</div>
       <div data-label="Hike">
-        <div class="hike-name">Lagazuoi WWI Tunnels + Summit</div>
-        <div class="hike-area">Cortina cluster · Cable car + tunnel descent</div>
+        <div class="hike-name">Tre Cime di Lavaredo + Cadini di Misurina</div>
+        <div class="hike-area">Day 6 · Cortina · Iconic combo, same trailhead</div>
         <div class="trail-links">
-          <a href="https://www.alltrails.com/trail/italy/veneto/monte-lagazuoi-le-gallerie-dell-anticima-del-lagazuoi" target="_blank" rel="noopener">AllTrails ↗</a>
-          <a href="https://www.komoot.com/smarttour/e1043441" target="_blank" rel="noopener">Komoot ↗</a>
+          <a href="https://www.alltrails.com/trail/italy/south-tyrol/rifugio-auronzo-tre-cime-di-lavaredo" target="_blank" rel="noopener">Tre Cime ↗</a>
+          <a href="https://www.alltrails.com/trail/italy/veneto/rifugio-auronzo-cadini-di-misurina" target="_blank" rel="noopener">Cadini ↗</a>
         </div>
       </div>
       <div data-label="Stats" class="stat-block">
-        <span class="v">4 km</span><span class="l">distance</span>
-        <span class="v">−650 m</span><span class="l">descent</span>
-        <span class="v">2–3 hrs</span><span class="l">time</span>
+        <span class="v">~14 km</span><span class="l">distance combined</span>
+        <span class="v">+600 m</span><span class="l">elevation</span>
+        <span class="v">6–7 hrs</span><span class="l">time</span>
       </div>
       <div data-label="Difficulty" class="rating-row">
-        <span class="diff diff-easy">Easy–Mod</span>
-        <span class="rating">★ 4.6</span>
-        <span class="rating-src">AllTrails · 266 reviews</span>
+        <span class="diff diff-moderate">Moderate</span>
+        <span class="rating">★ 4.8</span>
+        <span class="rating-src">AllTrails · 1,044 + 2,925</span>
       </div>
       <div data-label="Parking" class="booking">
-        <strong>€5 lot at Passo Falzarego</strong>
-        Cable car:
-        <a href="https://lagazuoi.it/EN/" target="_blank" rel="noopener">lagazuoi.it ↗</a>
-        <span class="when">First run 9 AM · helmet + headlamp rentable at parking</span>
+        <strong>Mandatory online booking</strong>
+        <a href="https://auronzo.info/en/parking-tre-cime-di-lavaredo/" target="_blank" rel="noopener">auronzo.info ↗</a>
+        <span class="when">€40/car · 12 hr · book ~9 Jun. Tre Cime loop AM, Cadini at sunset.</span>
       </div>
       <div data-label="Base">Cortina d'Ampezzo</div>
     </div>
 
-    <!-- Refugio row 8 -->
+    <!-- Refugio row 5 -->
     <div class="hike-row refugio-row">
       <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
       <div class="refugio-list" data-label="On this hike">
-        <a href="https://lagazuoi.it/EN/" target="_blank" rel="noopener">Rifugio Lagazuoi</a> (2,752 m · one of the most photogenic huts in the Dolomites, panoramic terrace, Finnish sauna, legendary sunsets, overnight bookable) ·
-        <a href="https://www.rifugioscotoni.com/" target="_blank" rel="noopener">Rifugio Scotoni</a> (2,040 m · 1 hr off route via Alta Via 1 · famous grilled meats and Lago di Lagazuoi) ·
-        <a href="https://rifugiocima5torri.it/" target="_blank" rel="noopener">Rifugio Col Gallina</a> (2,054 m · at the trailhead parking) ·
-        Berghotel Passo Falzarego (2,105 m · café at base of cable car) ·
-        Rifugio Valparola (Sasso di Stria area)
+        <a href="http://www.rifugioauronzo.it/" target="_blank" rel="noopener">Rifugio Auronzo</a> (2,320 m · start) ·
+        <a href="http://www.rifugiolavaredo.com/" target="_blank" rel="noopener">Rifugio Lavaredo</a> (2,344 m · first food stop) ·
+        <a href="https://www.dreizinnenhuette.com/" target="_blank" rel="noopener">Rifugio Locatelli / Dreizinnenhütte</a> (2,405 m · best view of north faces, classic lunch) ·
+        <a href="https://www.rifugiofondasavio.it/" target="_blank" rel="noopener">Rifugio Fonda Savio</a> (2,367 m · gateway to Cadini)
+      </div>
+    </div>
+
+    <!-- 6: Lago di Braies (Day 7) -->
+    <div class="hike-row">
+      <div class="hike-num" data-label="№">06</div>
+      <div data-label="Hike">
+        <div class="hike-name">Lago di Braies — Sunrise Loop</div>
+        <div class="hike-area">Day 7 · Pusteria · Sunrise classic</div>
+        <div class="trail-links">
+          <a href="https://www.alltrails.com/trail/italy/south-tyrol/lago-di-braies-loop" target="_blank" rel="noopener">AllTrails ↗</a>
+          <a href="https://www.komoot.com/smarttour/e1043437" target="_blank" rel="noopener">Komoot ↗</a>
+        </div>
+      </div>
+      <div data-label="Stats" class="stat-block">
+        <span class="v">3.5 km</span><span class="l">distance</span>
+        <span class="v">flat</span><span class="l">elevation</span>
+        <span class="v">1–1.5 hrs</span><span class="l">time</span>
+      </div>
+      <div data-label="Difficulty" class="rating-row">
+        <span class="diff diff-easy">Easy</span>
+        <span class="rating">★ 4.7</span>
+        <span class="rating-src">AllTrails · high volume</span>
+      </div>
+      <div data-label="Parking" class="booking">
+        <strong>Pre-9 AM = no booking needed</strong>
+        Restriction is 9 AM – 4 PM<br>
+        After 9: <a href="https://www.prags.bz/en" target="_blank" rel="noopener">prags.bz ↗</a> €44 combo
+        <span class="when">Leave Cortina ~4:30 AM for sunrise</span>
+      </div>
+      <div data-label="Base">Cortina</div>
+    </div>
+
+    <!-- Refugio row 6 -->
+    <div class="hike-row refugio-row">
+      <div class="refugio-label" data-label="Rifugi en route">RIFUGI</div>
+      <div class="refugio-list" data-label="On this hike">
+        Lakeside restaurants on the loop (Hotel Lago di Braies, Chalet Grill, Emmas Bistro) — open from breakfast onwards
       </div>
     </div>
 
@@ -1182,9 +1109,11 @@
       <div class="lg-row"><span class="dot dot-base"></span> Base Camp</div>
       <div class="lg-row"><span class="dot dot-hike"></span> Hike Start</div>
       <div class="lg-row"><span class="dot dot-rifugio"></span> Rifugio</div>
+      <div class="lg-row"><span class="dot dot-viewpoint"></span> Viewpoint</div>
+      <div class="lg-row"><span class="dot dot-food"></span> Food Stop</div>
       <div class="lg-row"><span class="dot dot-travel"></span> Airport</div>
       <div class="lg-divider"></div>
-      <div class="lg-note">Click a pin for trail<br>links (AllTrails, Komoot)</div>
+      <div class="lg-note">Click a pin for photo,<br>trail links + details</div>
     </div>
   </div>
 
@@ -1197,33 +1126,31 @@
   <div class="clusters">
     <div class="cluster">
       <div class="cluster-tag">Cluster A</div>
-      <div class="cluster-title">Val Gardena</div>
-      <div class="cluster-base">Base · Ortisei or Selva</div>
+      <div class="cluster-title">Val Gardena (Luson base · Days 2–4)</div>
+      <div class="cluster-base">Base · Luson (Ferienhaus Grünfelder)</div>
       <ul>
-        <li><span class="hn">03</span> Seceda Ridgeline</li>
-        <li><span class="hn">04</span> Resciesa → Brogles → Seceda</li>
-        <li><span class="hn">05</span> Col dala Pieres</li>
-        <li><span class="hn">06</span> Sassolungo Circuit</li>
+        <li><span class="hn">01</span> Sassolungo Circuit</li>
+        <li><span class="hn">02</span> Adolf-Munkel-Weg</li>
+        <li><span class="hn">03</span> Seceda Ridgeline (quick)</li>
       </ul>
     </div>
 
     <div class="cluster">
       <div class="cluster-tag">Cluster B</div>
-      <div class="cluster-title">Cortina / Falzarego</div>
+      <div class="cluster-title">Cortina / Falzarego (Day 5)</div>
       <div class="cluster-base">Base · Cortina d'Ampezzo</div>
       <ul>
-        <li><span class="hn">07</span> Cinque Torri + Nuvolau</li>
-        <li><span class="hn">08</span> Lagazuoi WWI Tunnels</li>
+        <li><span class="hn">04</span> Cinque Torri + Nuvolau</li>
       </ul>
     </div>
 
     <div class="cluster">
       <div class="cluster-tag">Cluster C</div>
-      <div class="cluster-title">Pusteria Lakes</div>
-      <div class="cluster-base">Base · Dobbiaco or Cortina</div>
+      <div class="cluster-title">Pusteria / Lavaredo (Days 6–7)</div>
+      <div class="cluster-base">Base · Cortina</div>
       <ul>
-        <li><span class="hn">01</span> Tre Cime di Lavaredo</li>
-        <li><span class="hn">02</span> Lago di Braies</li>
+        <li><span class="hn">05</span> Tre Cime + Cadini combo</li>
+        <li><span class="hn">06</span> Lago di Braies (sunrise)</li>
       </ul>
     </div>
   </div>
@@ -1239,50 +1166,50 @@
     <div class="day">
       <span class="day-num">DAY 01</span>
       <div class="day-date">Sat · 04 Jul</div>
-      <div class="day-base">→ Ortisei</div>
-      <div class="day-plan">Fly into Treviso, pick up rental, drive ~3 hrs. Evening stroll in town. <strong>Easy day.</strong></div>
+      <div class="day-base">→ Luson</div>
+      <div class="day-plan">Fly into Treviso, pick up rental, drive ~3 hrs to Luson (Ferienhaus Grünfelder). Evening explore. <strong>Easy day.</strong></div>
     </div>
 
     <div class="day">
       <span class="day-num">DAY 02</span>
       <div class="day-date">Sun · 05 Jul</div>
-      <div class="day-base">Ortisei</div>
-      <div class="day-plan"><strong>Sassolungo Circuit</strong> (06). Get the hardest day done with fresh legs.</div>
+      <div class="day-base">Luson</div>
+      <div class="day-plan"><strong>Sassolungo Circuit</strong> (01). ~1h 10min drive to Passo Sella. Get the hardest day done with fresh legs.</div>
     </div>
 
     <div class="day">
       <span class="day-num">DAY 03</span>
       <div class="day-date">Mon · 06 Jul</div>
-      <div class="day-base">Ortisei</div>
-      <div class="day-plan"><strong>Resciesa → Brogles → Seceda</strong> (04). Less crowded than standard Seceda.</div>
+      <div class="day-base">Luson</div>
+      <div class="day-plan"><strong>Adolf-Munkel-Weg</strong> (02). ~35 min drive to Val di Funes. Lunch at Geisler Alm.</div>
     </div>
 
     <div class="day">
       <span class="day-num">DAY 04</span>
       <div class="day-date">Tue · 07 Jul</div>
-      <div class="day-base">Ortisei</div>
-      <div class="day-plan"><strong>Col dala Pieres</strong> (05). Steepest summit; acclimatized by now.</div>
+      <div class="day-base">Luson</div>
+      <div class="day-plan"><strong>Seceda quick option</strong> (03) — ~50 min drive to Ortisei, cable car up, 1-hr ridge walk. Relaxed afternoon in Brixen or back at Ferienhaus.</div>
     </div>
 
     <div class="day">
       <span class="day-num">DAY 05</span>
       <div class="day-date">Wed · 08 Jul</div>
       <div class="day-base">→ Cortina</div>
-      <div class="day-plan">AM: drive (~1.5 hrs). PM: <strong>Cinque Torri + Nuvolau</strong> (07). Strudel earned.</div>
+      <div class="day-plan">AM: drive (~1.5 hrs). PM: <strong>Cinque Torri + Nuvolau</strong> (04). Strudel earned.</div>
     </div>
 
     <div class="day">
       <span class="day-num">DAY 06</span>
       <div class="day-date">Thu · 09 Jul</div>
       <div class="day-base">Cortina</div>
-      <div class="day-plan"><strong>Tre Cime di Lavaredo</strong> (01). Full day with the icon.</div>
+      <div class="day-plan"><strong>Tre Cime di Lavaredo + Cadini di Misurina</strong> combo (05). Same trailhead. Tre Cime loop AM, Cadini viewpoint at sunset.</div>
     </div>
 
     <div class="day">
       <span class="day-num">DAY 07</span>
       <div class="day-date">Fri · 10 Jul</div>
       <div class="day-base">Cortina</div>
-      <div class="day-plan">Sunrise: <strong>Lago di Braies</strong> (02). PM: <strong>Lagazuoi tunnels</strong> (08).</div>
+      <div class="day-plan">Sunrise: <strong>Lago di Braies</strong> (06) — 4:30 AM start, back by 9 AM. Free afternoon in Cortina.</div>
     </div>
 
     <div class="day">
@@ -1308,24 +1235,20 @@
         <span class="det">Saturday turnover = peak price. Lock now.</span>
       </li>
       <li>
-        <strong>Ortisei accommodation</strong>
-        <span class="det">3 nights (4–7 Jul). Fills fast for July.</span>
+        <strong>Luson accommodation</strong> ✓ booked
+        <span class="det">Ferienhaus Grünfelder · 4 nights (4–8 Jul) · ~€113/night · 9.5★</span>
       </li>
       <li>
         <strong>Cortina accommodation</strong>
         <span class="det">3 nights (8–10 Jul). Most expensive base.</span>
       </li>
       <li>
-        <strong>Seceda cable car</strong> · 6 Jul
-        <span class="det"><a href="https://www.seceda.it/en/info" target="_blank" rel="noopener">seceda.it ↗</a> — bookable now</span>
+        <strong>Seceda cable car</strong> · 7 Jul
+        <span class="det"><a href="https://www.seceda.it/en/info" target="_blank" rel="noopener">seceda.it ↗</a> · €52 return · bookable from April</span>
       </li>
       <li>
-        <strong>Col Raiser cable car</strong> · 7 Jul
-        <span class="det"><a href="https://www.colraiser.it/" target="_blank" rel="noopener">colraiser.it ↗</a></span>
-      </li>
-      <li>
-        <strong>Lagazuoi cable car</strong> · 10 Jul
-        <span class="det"><a href="https://lagazuoi.it/EN/" target="_blank" rel="noopener">lagazuoi.it ↗</a></span>
+        <strong>Cinque Torri chairlift</strong> · 8 Jul (optional)
+        <span class="det"><a href="https://www.5torri.it/" target="_blank" rel="noopener">5torri.it ↗</a> · €15 pp · skip if you'd rather walk up</span>
       </li>
     </ul>
     <h3>Set calendar reminders</h3>
@@ -1416,108 +1339,259 @@ const places = [
   { lat: 45.6498881, lng: 12.1944795, type: 'travel', label: '✈', name: 'Treviso Airport (TSF)', meta: 'Arrival & Departure', desc: 'Pick up rental car here. ~2.5 hr drive to Ortisei.', rating: '★ 3.3 · 9,040 reviews', url: 'https://www.trevisoairport.it/' },
 
   // Base Camps
-  { lat: 46.5747589, lng: 11.671108199999999, type: 'base', label: '1', name: 'Ortisei — Base Camp 1', meta: 'Nights 1–4 · Sat 4 → Wed 8 Jul', desc: 'Covers hikes 3, 4, 5, 6. Walking-friendly town with cable cars in the centre.', rating: '★ 4.7 · 2,088 reviews', url: 'https://www.valgardena.it/' },
-  { lat: 46.537843099999996, lng: 12.1358821, type: 'base', label: '2', name: "Cortina d'Ampezzo — Base Camp 2", meta: 'Nights 5–7 · Wed 8 → Sat 11 Jul', desc: 'Covers hikes 1, 2, 7, 8. Glitzier, pricier, central for eastern Dolomites.', rating: '', url: '' },
+  { lat: 46.7747, lng: 11.7681, type: 'base', label: '1', name: 'Luson — Base Camp 1 (Ferienhaus Grünfelder)', meta: 'Nights 1–4 · Sat 4 → Wed 8 Jul', desc: 'Booked: Ferienhaus Grünfelder, Unterrungger Straße 5. ~€113/night including breakfast & parking. 9.5★ / 97 reviews. Day 3 trailhead (Adolf-Munkel-Weg) is 35 min; Day 2 Sassolungo and Day 4 Seceda are longer drives (~1 hr+).', rating: '★ 9.5 · 97 reviews (Booking)', url: 'https://www.booking.com/hotel/it/ferienhaus-grunfelder.en-gb.html' },
+  { lat: 46.537843099999996, lng: 12.1358821, type: 'base', label: '2', name: "Cortina d'Ampezzo — Base Camp 2", meta: 'Nights 5–7 · Wed 8 → Sat 11 Jul', desc: 'Covers hikes 4, 5, 6 (Cinque Torri, Tre Cime + Cadini, Braies). Glitzier, pricier, central for eastern Dolomites.', rating: '', url: '' },
 
   // Hike trailheads
   {
-    lat: 46.6122429, lng: 12.2961887, type: 'hike', label: '1',
+    lat: 46.6122429, lng: 12.2961887, type: 'hike', label: '5',
     name: 'Tre Cime di Lavaredo — Rifugio Auronzo',
-    meta: 'Hike 1 · 10 km loop, moderate',
+    meta: 'Hike 5 · Tre Cime loop (paired with Cadini)',
     desc: 'Trailhead. €40 parking, MUST book at auronzo.info ~1 month ahead. Eat at Locatelli, not here.',
     rating: '★ 4.8 (AllTrails · 1,044 reviews)',
     url: 'http://www.rifugioauronzo.it/',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/rifugio-auronzo-tre-cime-di-lavaredo',
-    komoot: 'https://www.komoot.com/smarttour/e1064037/hike-around-the-three-peaks-of-lavaredo'
+    komoot: 'https://www.komoot.com/smarttour/e1064037/hike-around-the-three-peaks-of-lavaredo',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/2019_Tre_Cime.jpg?width=480'
   },
   {
-    lat: 46.694333, lng: 12.0854273, type: 'hike', label: '2',
+    lat: 46.694333, lng: 12.0854273, type: 'hike', label: '6',
     name: 'Lago di Braies (Pragser Wildsee)',
-    meta: 'Hike 2 · 3.5 km flat loop',
+    meta: 'Hike 6 · sunrise lake loop',
     desc: 'Sunrise is magic. Park at P4 (lakeside) or P1 + shuttle (€44 combo). Restricted 9–4 in summer.',
     rating: '★ 4.7 · 17,920 Google reviews',
     url: 'https://www.prags.bz/en',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/lago-di-braies-loop',
-    komoot: 'https://www.komoot.com/smarttour/e1043437/hike-around-lake-prags'
+    komoot: 'https://www.komoot.com/smarttour/e1043437/hike-around-lake-prags',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pragser_Wildsee_Seekofel_von_Bucht.jpg?width=480'
   },
   {
     lat: 46.5764597, lng: 11.6748572, type: 'hike', label: '3',
     name: 'Seceda Cable Car (valley station)',
-    meta: 'Hike 3 · Ridgeline walk',
-    desc: 'Cable car up from Ortisei. €52 return. Book at seceda.it — timed slots in summer.',
+    meta: 'Hike 3 · Seceda cable car (quick option)',
+    desc: 'End of Hike 3 — ride the lift back to Ortisei. Or use it both ways for a 1-hr quick version of the Seceda ridge view alone (€52 return, book at seceda.it).',
     rating: '★ 4.3 · 3,090 reviews',
     url: 'https://www.seceda.it/en/info',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/seceda-ridgeline-trail',
-    komoot: 'https://www.komoot.com/highlight/12345-seceda-ridgeline'
+    komoot: 'https://www.komoot.com/highlight/12345-seceda-ridgeline',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Seceda_w.jpg?width=480'
   },
   {
-    lat: 46.5780588, lng: 11.672249299999999, type: 'hike', label: '4',
+    lat: 46.5780588, lng: 11.672249299999999, type: 'viewpoint', label: '★',
     name: 'Funicolare Resciesa (Ortisei)',
-    meta: 'Hike 4 · Resciesa → Brogles → Seceda',
+    meta: 'Optional · long Resciesa traverse (5–6 hrs)',
     desc: 'Funicular up. Traverse 12 km across to Seceda lift down. 5–6 hrs, ~700m elevation.',
     rating: '★ 4.5 · 963 reviews',
     url: 'http://www.resciesa.com/',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/rasciesa-brogles-seceda',
-    komoot: 'https://www.komoot.com/smarttour/e2046581/hike-from-rasciesa-via-brogles-to-seceda'
+    komoot: 'https://www.komoot.com/smarttour/e2046581/hike-from-rasciesa-via-brogles-to-seceda',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Odles_da_Sec%C3%ABda_Gherd%C3%ABina.jpg?width=480'
   },
   {
-    lat: 46.5637683, lng: 11.753437199999999, type: 'hike', label: '5',
+    lat: 46.5637683, lng: 11.753437199999999, type: 'viewpoint', label: '★',
     name: 'Parcheggio Daunëi — Col dala Pieres',
-    meta: 'Hike 5 · Option A trailhead',
+    meta: 'Optional · Col dala Pieres trailhead (Daunëi)',
     desc: '€8/day. Trails 17/17A to Rifugio Stevia, then to Col dala Pieres summit (2,747 m).',
     rating: '★ 4.7 (AllTrails)',
     url: '',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/daunei-col-da-la-pieres',
-    komoot: 'https://www.komoot.com/highlight/77224'
+    komoot: 'https://www.komoot.com/highlight/77224',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Col_dala_Pieres_Puez_Mont_de_S%C3%ABura_Cir_Sela_da_Stevia_te_Gherd%C3%ABina.jpg?width=480'
   },
   {
-    lat: 46.5848607, lng: 11.7454345, type: 'hike', label: '5',
+    lat: 46.5848607, lng: 11.7454345, type: 'viewpoint', label: '★',
     name: 'Col Raiser Cable Car (Santa Cristina)',
-    meta: 'Hike 5 · Option B trailhead',
+    meta: 'Optional · Col dala Pieres trailhead (Col Raiser)',
     desc: 'Cable car up, then via Rifugio Firenze. Book at colraiser.it.',
     rating: '★ 4.6 (AllTrails · 26 reviews)',
     url: 'https://www.colraiser.it/',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/col-raiser-col-dala-pieres',
-    komoot: ''
+    komoot: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Odles_Stevia_Col_dala_Pieres.jpg?width=480'
   },
   {
-    lat: 46.5096523, lng: 11.7574059, type: 'hike', label: '6',
+    lat: 46.5096523, lng: 11.7574059, type: 'hike', label: '1',
     name: 'Passo Sella — Sassolungo Circuit',
-    meta: 'Hike 6 · 18 km circuit, hard',
+    meta: 'Hike 1 · 18 km circuit, hard',
     desc: '€4/hr — pricey. Arrive before 9 AM or take the Sella Ronda bus.',
     rating: '★ 4.7 (AllTrails)',
     url: '',
     alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/sassolungo-circuit',
-    komoot: 'https://www.komoot.com/smarttour/e1043435/hike-around-the-sassolungo'
+    komoot: 'https://www.komoot.com/smarttour/e1043435/hike-around-the-sassolungo',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Saslonch_da_Mont_de_Seuc.jpg?width=480'
   },
   {
-    lat: 46.5202599, lng: 12.019261199999999, type: 'hike', label: '7',
+    lat: 46.5202599, lng: 12.019261199999999, type: 'hike', label: '4',
     name: 'Col Gallina — Cinque Torri + Nuvolau',
-    meta: 'Hike 7 · 11 km loop',
+    meta: 'Hike 4 · 11 km loop',
     desc: 'Free parking. Lot is small and fills fast in summer.',
     rating: '★ 4.7 (AllTrails)',
     url: '',
     alltrails: 'https://www.alltrails.com/trail/italy/veneto/rifugio-nuvolau-and-cinque-torri-loop',
-    komoot: 'https://www.komoot.com/smarttour/e1043440/hike-cinque-torri-and-rifugio-nuvolau'
+    komoot: 'https://www.komoot.com/smarttour/e1043440/hike-cinque-torri-and-rifugio-nuvolau',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cortina_%2850162425826%29.jpg?width=480'
   },
   {
-    lat: 46.519, lng: 12.008, type: 'hike', label: '8',
+    lat: 46.519, lng: 12.008, type: 'viewpoint', label: '★',
     name: 'Passo Falzarego — Lagazuoi WWI Tunnels',
-    meta: 'Hike 8 · 4 km descent, easy-moderate',
+    meta: 'Optional · Lagazuoi WWI tunnels descent',
     desc: '€5 parking. Helmet & headlamp rentable on-site. Cable car up, tunnels down.',
     rating: '★ 4.6 · 266 AllTrails reviews',
     url: 'https://lagazuoi.it/EN/',
     alltrails: 'https://www.alltrails.com/trail/italy/veneto/monte-lagazuoi-le-gallerie-dell-anticima-del-lagazuoi',
-    komoot: 'https://www.komoot.com/smarttour/e1043441/hike-through-the-lagazuoi-war-tunnels'
+    komoot: 'https://www.komoot.com/smarttour/e1043441/hike-through-the-lagazuoi-war-tunnels',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lagazuoi_cable_car_2.jpg?width=480'
+  },
+
+  // Viewpoints & extra spots
+  {
+    lat: 46.6013, lng: 12.2705, type: 'viewpoint', label: '5★',
+    name: 'Cadini di Misurina — Forcella del Diavolo',
+    meta: 'Hike 5 (extension) · Cadini viewpoint, 1–2 hrs',
+    desc: 'The famous knife-edge ridge view of the Cadini towers. Start from Rifugio Auronzo (Hike 1 parking) — overlooks the Tre Cime loop. Best at golden hour.',
+    rating: '★ 4.9 · iconic Dolomites shot',
+    url: '',
+    alltrails: 'https://www.alltrails.com/trail/italy/veneto/cadini-di-misurina-viewpoint',
+    komoot: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cadini_di_Misurina_Lavaredo_4.jpg?width=480'
+  },
+  {
+    lat: 46.5783, lng: 11.7661, type: 'viewpoint', label: '★',
+    name: 'Seceda Ridgeline (summit area)',
+    meta: 'Viewpoint · top of cable car',
+    desc: 'The iconic tilted ridge over the Val Gardena, with the Odle/Geisler spires behind. ~10 min walk from the upper Seceda station.',
+    rating: '★ 4.8',
+    url: 'https://www.seceda.it/en/info',
+    alltrails: '',
+    komoot: 'https://www.komoot.com/highlight/210749',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Seceda_w.jpg?width=480'
+  },
+  {
+    lat: 46.5413, lng: 11.6376, type: 'viewpoint', label: '★',
+    name: 'Alpe di Siusi (Seiser Alm)',
+    meta: 'Viewpoint · Europe’s largest alpine meadow',
+    desc: 'Rolling pastures with Sassolungo as backdrop. Cable car from Siusi or drive (restricted 9–17 in summer). Easy walks plus options up to Rifugio Bolzano.',
+    rating: '★ 4.7',
+    url: 'https://www.seiseralm.it/en',
+    alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/alpe-di-siusi-loop',
+    komoot: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Saslonch_udu_da_Mont_de_Seuc.jpg?width=480'
+  },
+  {
+    lat: 46.6276, lng: 11.7361, type: 'hike', label: '2',
+    name: 'Adolf-Munkel-Weg (Zanser Alm trailhead)',
+    meta: 'Hike 2 · Adolf-Munkel-Weg, easy-moderate',
+    desc: 'Cult-favourite traverse along the base of the Odle/Geisler peaks. Start at Zanser Alm (Val di Funes) — park at Malga Zannes (€6). Passes Geisler Alm.',
+    rating: '★ 4.8 (AllTrails)',
+    url: 'https://www.valdifunes.info/en/',
+    alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/adolf-munkel-weg',
+    komoot: 'https://www.komoot.com/smarttour/e58947/hike-on-the-adolf-munkel-trail',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/20120716_0457-_Geislergruppe_von_der_Broglesh%C3%BCtte.jpg?width=480'
+  },
+  {
+    lat: 46.6238, lng: 11.7566, type: 'rifugio', label: '⛺',
+    name: 'Geisler Alm (Malga Geisler)',
+    meta: 'On Adolf-Munkel-Weg',
+    desc: 'The legendary lunch stop directly under the Odle. Goulash and apple strudel on the meadow. Get there early — fills by noon. Open Jun–Oct.',
+    rating: '★ 4.6 · 2,100+ reviews',
+    url: 'https://www.geisleralm.com/en',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rast_auf_der_Gschnagenhardt-Alm_-_Malga_Casnago_20170703_%2835534659894%29.jpg?width=480'
+  },
+  {
+    lat: 46.6011, lng: 11.8181, type: 'viewpoint', label: '★',
+    name: 'Col de la Puina',
+    meta: 'Viewpoint · 2,254 m summit (Puez plateau)',
+    desc: 'Quiet panoramic summit on the Puez plateau, reachable as an extension of the optional Col dala Pieres route. 360° view over Odle, Sella, Marmolada.',
+    rating: 'lesser-known gem',
+    url: '',
+    alltrails: '',
+    komoot: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Col_de_Puez_da_Col_dala_Pieres_2.jpg?width=480'
+  },
+  {
+    lat: 46.5253, lng: 12.1971, type: 'viewpoint', label: '★',
+    name: 'Lago di Sorapis',
+    meta: 'Hike · 12 km out & back, moderate',
+    desc: 'Milky turquoise glacial lake under the Sorapis range. Trailhead at Passo Tre Croci (10 min from Cortina). 3–4 hrs return, one exposed ledge section.',
+    rating: '★ 4.7 · very popular',
+    url: '',
+    alltrails: 'https://www.alltrails.com/trail/italy/veneto/lago-del-sorapiss',
+    komoot: 'https://www.komoot.com/smarttour/e1043439/hike-to-lago-di-sorapis',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lago_di_Sorapis_1.jpg?width=480'
+  },
+  {
+    lat: 46.6792, lng: 11.7836, type: 'viewpoint', label: '★',
+    name: 'Passo delle Erbe (Würzjoch)',
+    meta: 'Viewpoint · 2,004 m mountain pass',
+    desc: 'Scenic drive on SP29 between Val di Funes and Val Badia. Sas de Putia massif rises right above. Multiple short walks from the top (Putia loop ~6 km).',
+    rating: '★ 4.7',
+    url: '',
+    alltrails: 'https://www.alltrails.com/trail/italy/south-tyrol/sas-de-putia-loop',
+    komoot: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Passoerbe0.jpg?width=480'
+  },
+
+  // Round 2 additions
+  {
+    lat: 46.6175, lng: 12.3056, type: 'viewpoint', label: '★',
+    name: 'Tre Cime di Lavaredo (peaks)',
+    meta: 'Iconic landmark · 2,999 m',
+    desc: 'The three peaks themselves — Cima Grande, Cima Ovest, Cima Piccola. Most photographed view from the north side at Rifugio Locatelli.',
+    rating: '★ 4.9 · symbol of the Dolomites',
+    url: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/2019_Tre_Cime.jpg?width=480'
+  },
+  {
+    lat: 46.4087, lng: 11.5762, type: 'viewpoint', label: '★',
+    name: 'Lago di Carezza (Karersee)',
+    meta: 'Viewpoint · small alpine lake',
+    desc: 'Rainbow-coloured lake with the Latemar reflected. 5 min from the parking lot — no real hike. Worth a stop if driving in/out via Bolzano.',
+    rating: '★ 4.6',
+    url: 'https://www.lagodicarezza.com/en',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Carezza,_view_heading_North.jpg?width=480'
+  },
+  {
+    lat: 46.6213, lng: 12.3110, type: 'food', label: '🍴',
+    name: 'Rifugio Lavaredo',
+    meta: 'Food stop · on Tre Cime loop (Hike 5)',
+    desc: '2,344 m. First rifugio on the Tre Cime loop (~20 min from Auronzo). Casual lunch, good polenta and goulash. Less crowded than Locatelli.',
+    rating: '★ 4.4 · 1,200+ reviews',
+    url: 'http://www.rifugiolavaredo.com/'
+  },
+  {
+    lat: 46.5836, lng: 12.1721, type: 'viewpoint', label: '★',
+    name: 'Passo Tre Croci — Lago di Sorapis trailhead',
+    meta: 'Optional · Sorapis trailhead (10 min from Cortina)',
+    desc: '~10 min drive from Cortina. Small parking lot fills by 8 AM in summer. Path 215 to Rifugio Vandelli + lake, ~3 hrs return.',
+    rating: 'trailhead',
+    url: '',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Veneto_Passo_Tre_Croci_17.jpg?width=480'
+  },
+  {
+    lat: 46.5258, lng: 12.1985, type: 'rifugio', label: '⛺',
+    name: 'Rifugio Vandelli',
+    meta: 'On Lago di Sorapis hike',
+    desc: '1,928 m. Sits right above the lake. Hearty Veneto food, decent prices for the location. Sleep here to catch sunrise on the lake alone.',
+    rating: '★ 4.3 · 1,500+ reviews',
+    url: 'http://www.rifugiovandelli.com/'
+  },
+  {
+    lat: 46.5085, lng: 11.7305, type: 'rifugio', label: '⛺',
+    name: 'Rifugio Friedrich August',
+    meta: 'On Sassolungo Circuit (Hike 1)',
+    desc: '2,298 m. Panoramic terrace facing the Sella massif. Popular lunch stop on the south side of the loop — try the canederli.',
+    rating: '★ 4.5 · 800+ reviews',
+    url: 'https://www.rifugiofriedrichaugust.com/',
+    img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Friedrich-August-H%C3%BCtte.jpg?width=480'
   },
 
   // Standout Rifugi
-  { lat: 46.6368747, lng: 12.3105227, type: 'rifugio', label: '⛺', name: 'Rifugio Locatelli (Dreizinnenhütte)', meta: 'On Hike 1', desc: 'The lunch stop on the Tre Cime loop. Best view of the north faces. Cash only.', rating: '★ 4.2 · 3,120 reviews', url: 'http://www.dreizinnenhuette.com/' },
-  { lat: 46.610303699999996, lng: 11.7273126, type: 'rifugio', label: '⛺', name: 'Rifugio Brogles (Brogleshütte)', meta: 'On Hike 4', desc: 'Mid-route lunch stop. Coffee with cream from their own cows + apple strudel. Closes after lunch.', rating: '★ 4.0 · 614 reviews', url: '' },
-  { lat: 46.5874418, lng: 11.7582717, type: 'rifugio', label: '⛺', name: 'Rifugio Firenze (Regensburgerhütte)', meta: 'On Hike 5 (Col Raiser route)', desc: '25 min from Col Raiser top station. Excellent food, friendly staff, very clean.', rating: '★ 4.5 · 1,598 reviews', url: 'http://www.rifugiofirenze.com/' },
-  { lat: 46.590077, lng: 11.8293631, type: 'rifugio', label: '⛺', name: 'Rifugio Puez', meta: 'On Hike 5 (descent variant)', desc: 'The deep Puez plateau. Mixed reviews on service but spectacular setting.', rating: '★ 4.0 · 904 reviews', url: 'http://www.rifugiopuez.it/' },
-  { lat: 46.51993830000001, lng: 11.7236821, type: 'rifugio', label: '⛺', name: 'Rifugio Vicenza (Langkofelhütte)', meta: 'On Hike 6', desc: 'Tucked inside the Sassolungo amphitheater. Aglio e olio is legendary. Free outdoor shower.', rating: '★ 4.5 · 1,210 reviews', url: 'http://www.rifugiovicenza.com/' },
-  { lat: 46.495174999999996, lng: 12.0457895, type: 'rifugio', label: '⛺', name: 'Rifugio Nuvolau', meta: 'On Hike 7', desc: 'Oldest rifugio in the Dolomites (2,575 m). 360° terrace. Apple strudel non-negotiable.', rating: '★ 4.7 · 1,832 reviews', url: 'http://www.rifugionuvolau.it/' }
+  { lat: 46.6368747, lng: 12.3105227, type: 'rifugio', label: '⛺', name: 'Rifugio Locatelli (Dreizinnenhütte)', meta: 'On Hike 5 (Tre Cime)', desc: 'The lunch stop on the Tre Cime loop. Best view of the north faces. Cash only.', rating: '★ 4.2 · 3,120 reviews', url: 'http://www.dreizinnenhuette.com/' },
+  { lat: 46.610303699999996, lng: 11.7273126, type: 'rifugio', label: '⛺', name: 'Rifugio Brogles (Brogleshütte)', meta: 'Optional · on Resciesa traverse', desc: 'Mid-route lunch stop. Coffee with cream from their own cows + apple strudel. Closes after lunch.', rating: '★ 4.0 · 614 reviews', url: '' },
+  { lat: 46.5874418, lng: 11.7582717, type: 'rifugio', label: '⛺', name: 'Rifugio Firenze (Regensburgerhütte)', meta: 'Optional · on Col dala Pieres route', desc: '25 min from Col Raiser top station. Excellent food, friendly staff, very clean.', rating: '★ 4.5 · 1,598 reviews', url: 'http://www.rifugiofirenze.com/' },
+  { lat: 46.590077, lng: 11.8293631, type: 'rifugio', label: '⛺', name: 'Rifugio Puez', meta: 'Optional · Puez plateau', desc: 'The deep Puez plateau. Mixed reviews on service but spectacular setting.', rating: '★ 4.0 · 904 reviews', url: 'http://www.rifugiopuez.it/' },
+  { lat: 46.51993830000001, lng: 11.7236821, type: 'rifugio', label: '⛺', name: 'Rifugio Vicenza (Langkofelhütte)', meta: 'On Hike 1 (Sassolungo)', desc: 'Tucked inside the Sassolungo amphitheater. Aglio e olio is legendary. Free outdoor shower.', rating: '★ 4.5 · 1,210 reviews', url: 'http://www.rifugiovicenza.com/' },
+  { lat: 46.495174999999996, lng: 12.0457895, type: 'rifugio', label: '⛺', name: 'Rifugio Nuvolau', meta: 'On Hike 4 (Cinque Torri)', desc: 'Oldest rifugio in the Dolomites (2,575 m). 360° terrace. Apple strudel non-negotiable.', rating: '★ 4.7 · 1,832 reviews', url: 'http://www.rifugionuvolau.it/' }
 ];
 
 const markers = [];
@@ -1534,6 +1608,7 @@ places.forEach(p => {
   }
 
   const popupHtml = `
+    ${p.img ? `<img class="pop-img" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">` : ''}
     <span class="pop-title">${p.name}</span>
     <div class="pop-meta">${p.meta}</div>
     <div>${p.desc}</div>
